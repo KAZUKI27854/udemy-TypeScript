@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScriptまとめ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>TypeScriptまとめ</h1>
+
+    <h2>概要</h2>
+    <div class="image-div">
+        <img src="images/What's_TypeScript.png" class="image-memo">
+        <img src="images/What's_TypeScript_1.png" class="image-memo">
+        <img src="images/What's_TypeScript_2.png" class="image-memo">
+        <img src="images/What's_TypeScript_3.png" class="image-memo">
+    </div>
+
+    <h2>まとめ</h2>
+    <li>
+        【環境構築】<br>
+        <span> npm install -g typescript </span> で、インストール。-gオプションをつけることで全てのフォルダでTypeScriptが使用可能になる。
+    </li>
+    <li>
+        【使い方】<br>
+        index.tsのような形でtsファイルを作成後、コンソールで <span> tsc index.ts </span> とすることでコンパイルされ、index.jsファイルが作成される。
+    </li>
+    <li>
+        【なぜTypeScriptを使うの？】<br>
+        1. ドキュメントとしての側面を利用する為<br>
+           => 関数を書く際に、引数の型や、戻り値の型を記述する為、ドキュメントとしてわかりやすくなる<br>
+        2. Linterとしての側面を利用する為<br>
+           => Linterとは、コードが正しいか検証してくれるもの。TypeScriptもコンパイル前にコードチェックを実行してくれる。型の検証もしてくれる点が便利。<br>
+           ※ コードエラーの警告が出ていても、jsファイルは作成される<br>
+        3. ES5へのコンパイラとしての側面を利用する為<br>
+           => ES6に対応していないブラウザもまだ多いが、ES5なら全ても主要なブラウザがサポートしている。<br>
+           => ダウングレードしてコンパイルする際は <span> tsc index.ts --target ES2015 </span> のようにしてコンパイルする<br>
+           ※ ダウングレードできないものもあるので、<span> es6 compat table </span>と検索して赤色になっていないか確認が必要
+    </li>
+</body>
+</html>

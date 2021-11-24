@@ -1,0 +1,12 @@
+.image-memo {
+    width: 35%;
+}
+
+.image-div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li > span {
+    background-color: lightgray;
+}
